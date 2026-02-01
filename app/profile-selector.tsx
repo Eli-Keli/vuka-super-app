@@ -50,7 +50,7 @@ export default function ProfileSelector() {
 
   const handleSelect = async (id: AccessibilityProfile) => {
     await setProfile(id);
-    router.replace('/');
+    router.replace('/launcher');
   };
 
   return (

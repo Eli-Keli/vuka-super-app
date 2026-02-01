@@ -40,10 +40,15 @@
     "react-native-worklets": "0.5.1"
   },
   "devDependencies": {
+    "@callstack/repack": "^5.2.3",
+    "@react-native-community/cli": "^20.1.1",
     "@types/react": "~19.1.0",
+    "babel-loader": "^10.0.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
-    "typescript": "~5.9.2"
+    "terser-webpack-plugin": "^5.3.16",
+    "typescript": "~5.9.2",
+    "webpack": "^5.104.1"
   },
   "private": true
 }

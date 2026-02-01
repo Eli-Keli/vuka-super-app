@@ -45,20 +45,20 @@ Vuka Ecosystem
 
 Given we're building a super app with React Native, we have three options:
 
-#### **Option 1: Module Federation (Recommended)**
+#### **Option 1: Module Federation (Future Target)**
 
 - Use `@module-federation/react-native` or `repack`
 - **Pros**: Independent deployment, code splitting, team autonomy
 - **Cons**: Complex setup, dependency management challenges
 - **Best for**: Long-term scaling with multiple teams
 
-#### **Option 2: Monorepo with Dynamic Imports**
+#### **Option 2: Monorepo with Internal Registry (Current Strategy)**
 
-- Single repo with workspaces (Yarn/NPM)
-- Dynamic `import()` for lazy loading mini-apps
-- **Pros**: Simpler setup, shared dependencies
-- **Cons**: Coupled deployment, larger bundle size
-- **Best for**: Small team, rapid prototyping phase
+- Single repo with `mini-apps` directory
+- Internal Registry pattern to load apps
+- **Pros**: Simpler setup, shared dependencies, faster development
+- **Cons**: Coupled deployment, larger bundle size (initially)
+- **Best for**: Rapid prototyping phase and Day 1 launch
 
 #### **Option 3: WebView-Based Microfrontends**
 
@@ -68,9 +68,9 @@ Given we're building a super app with React Native, we have three options:
 - **Cons**: Performance overhead, native API limitations
 - **Best for**: Content-heavy apps, marketing pages
 
-### **Current Implementation (Phase 1)**
+### **Current Implementation (Phase 2)**
 
-We're starting with **Option 2 (Monorepo)** for rapid development, with plans to migrate to **Option 1 (Module Federation)** as we scale.
+We are currently executing **Option 2 (Monorepo)**. We have established a "Mini-App Registry" that allows us to build and test mini-apps as regular React Native components while maintaining logical separation. This allows us to focus on the **Adaptive UI** logic without getting bogged down in build tools.
 
 ## Adaptive Design System
 
